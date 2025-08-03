@@ -1,5 +1,3 @@
-Here’s your `README.md` file with all emojis removed:
-
 ```markdown
 # Premier League Table Predictor (2025/26)
 
