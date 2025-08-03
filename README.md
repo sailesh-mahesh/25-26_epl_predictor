@@ -54,6 +54,8 @@ premier-league-predictor/
 └── code/
 ├── 01\_data\_preprocessing.py
 ├── 02\_feature\_engineering.py
+├── 02b_add_xg_features.py
+├── 02c_final_data_merge.py
 └── 03\_model\_training.py
 
 ````
@@ -102,6 +104,8 @@ The `code/02_feature_engineering.py` script contains the necessary real xG/xGA d
 ```bash
 python code/01_data_preprocessing.py
 python code/02_feature_engineering.py
+python code/02b_add_xg_features.py
+python code/02c_final_data_merge.py
 python code/03_model_training.py
 ```
 
