@@ -1,4 +1,3 @@
-```markdown
 # Premier League Table Predictor (2025/26)
 
 This project is a simple, data-driven model to predict the final standings of the **2025/26 Premier League** season. It was built using Python and machine learning techniques, combining historical football data with manual transfer window ratings. It’s my first proper project, so the focus is on building something that sligns with my interests
