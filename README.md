@@ -58,8 +58,8 @@ premier-league-predictor/
 
 1. **Clone the repo**:
 ```bash
-git clone <your-repo-url>
-cd premier-league-predictor
+git clone https://github.com/sailesh-mahesh/25-26_epl_predictor
+cd 25-26_epl_predictor
 ````
 
 2. **(Optional) Create a virtual environment**:
