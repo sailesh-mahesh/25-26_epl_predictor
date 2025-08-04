@@ -18,16 +18,16 @@ This project provides a Python-based machine learning model designed to predict 
 - Premier League and Championship data from the last 5 seasons.
 
 **Calculated Team Stats:**
-- Points, Wins, Draws, Losses
-- Goals Scored, Goals Conceded, Goal Difference
-- Team Form (points from the last 10 matches of the previous season)
-- Real xG (Expected Goals) and xGA (Expected Goals Against) for deeper performance insights
-- Long-term Premier League averages (`prev_pl_avg_points`) to provide historical context
-- Synthetic Historical Transfer Impact: `transfer_impact` feature for past seasons based on actual point changes
-- Promotion/Relegation flags
+- Points, Wins, Draws, Losses  
+- Goals Scored, Goals Conceded, Goal Difference  
+- Team Form (points from the last 10 matches of the previous season)  
+- Real xG (Expected Goals) and xGA (Expected Goals Against) for deeper performance insights  
+- Long-term Premier League averages (`prev_pl_avg_points`) to provide historical context  
+- Synthetic Historical Transfer Impact: `transfer_impact` feature for past seasons based on actual point changes  
+- Promotion/Relegation flags  
 
 **Transfer Impact Input:**
-- Manually rate each team’s current transfer window (from -10 for a very negative impact to +10 for a very positive impact)
+- Manually rate each team’s current transfer window (from -10 for a very negative impact to +10 for a very positive impact)  
 - These values adjust predicted points and goals for each team
 
 ---
@@ -42,20 +42,20 @@ This project provides a Python-based machine learning model designed to predict 
 
 3. **Feature Engineering**  
    Raw data is transformed into predictive features including:
-   - Team form
-   - xG differentials
-   - Historical averages
+   - Team form  
+   - xG differentials  
+   - Historical averages  
    - Synthetic `transfer_impact` values for training
 
 4. **Model Training**  
    A Random Forest Regressor is trained on historical data using the features above to learn relationships and predict:
-   - Final points
-   - Goals scored
+   - Final points  
+   - Goals scored  
    - Goals conceded
 
 5. **Interactive Prediction**  
-   - Uses stats from the 2024/2025 season to predict the 2025/2026 outcomes
-   - Accepts user input for transfer window impact
+   - Uses stats from the 2024/2025 season to predict the 2025/2026 outcomes  
+   - Accepts user input for transfer window impact  
    - Applies impact adjustments before generating the final predicted table
 
 ---
@@ -64,54 +64,58 @@ This project provides a Python-based machine learning model designed to predict 
 
 Clone the repo:
 
+```bash
 git clone https://github.com/sailesh-mahesh/25-26_epl_predictor
 cd 25-26_epl_predictor
+```
+
 (Optional) Create and activate a virtual environment:
 
-bash
-Copy
-Edit
+```bash
 python3 -m venv epl_pred_venv
-source epl_pred_venv/bin/activate  # Windows: .\epl_pred_venv\Scripts\activate
+source epl_pred_venv/bin/activate  # On Windows: .\epl_pred_venv\Scripts\activate
+```
+
 Install dependencies:
 
-bash
-Copy
-Edit
+```bash
 pip install pandas scikit-learn numpy
+```
+
 Download and organize match data:
 
-Visit football-data.co.uk
+- Visit [football-data.co.uk](https://www.football-data.co.uk/englandm.php)  
+- Download EPL (E0) and Championship (E1) CSVs for seasons 2020/21 to 2024/25  
+- Place EPL CSVs in `data/premier_league/`  
+- Place Championship CSVs in `data/championship/`  
 
-Download EPL (E0) and Championship (E1) CSVs for seasons 2020/21 to 2024/25
+---
 
-Place EPL CSVs in data/premier_league/
+## Running the Model
 
-Place Championship CSVs in data/championship/
+1. Run data preprocessing:
 
-Running the Model
-Run data preprocessing:
-
-bash
-Copy
-Edit
+```bash
 python code/01_data_preprocessing.py
-Run feature engineering:
+```
 
-bash
-Copy
-Edit
+2. Run feature engineering:
+
+```bash
 python code/02_feature_engineering.py
-Train model and make predictions (you will be prompted for transfer ratings):
+```
 
-bash
-Copy
-Edit
+3. Train model and make predictions (you will be prompted for transfer ratings):
+
+```bash
 python code/03_model_training.py
-Project Structure
-graphql
-Copy
-Edit
+```
+
+---
+
+## Project Structure
+
+```
 25-26_epl_predictor/
 ├── data/
 │   ├── premier_league/             # Raw EPL match CSVs (E0_*.csv)
@@ -122,14 +126,19 @@ Edit
     ├── 01_data_preprocessing.py
     ├── 02_feature_engineering.py
     └── 03_model_training.py
-Dependencies
-Python 3.x
+```
 
-pandas
+---
 
-scikit-learn
+## Dependencies
 
-numpy
+- Python 3.x  
+- pandas  
+- scikit-learn  
+- numpy
 
-Feedback
+---
+
+## Feedback
+
 Feel free to fork, use, or suggest improvements. Any feedback is welcome!
