@@ -64,7 +64,6 @@ This project provides a Python-based machine learning model designed to predict 
 
 Clone the repo:
 
-```bash
 git clone https://github.com/sailesh-mahesh/25-26_epl_predictor
 cd 25-26_epl_predictor
 (Optional) Create and activate a virtual environment:
